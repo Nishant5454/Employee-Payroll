@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+// uc1
 
 @RestController
 @RequestMapping("/employees")
@@ -22,7 +23,7 @@ public class Controller {
     }
     @PostMapping()
     public Employee createEmployee(@RequestBody Employee employee){
-       return  employeeService.saveEmployee(employee);
+       return  employeeService.saveEmployee(employee);// save the employee in the database
     }
     @PutMapping({"put/{id}"})
     public Employee updateEmployeebyId(@PathVariable Long id,@RequestBody Employee employee){
